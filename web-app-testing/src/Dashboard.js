@@ -7,23 +7,35 @@ const Dashboard = () => {
 
   const strikeClickHandler = () => {
     console.log("strike was clicked!");
-    if(strikeCount < 3){
+    if(strikeCount + 1 < 3){
         setStrikeCount(strikeCount +1)
-    } if (strikeCount + 1 === 3){
+    } else {
         setStrikeCount(0);
     }
   };
 
   const ballClickHandler = () => {
     console.log("ball was clicked!");
+    if(ballCount + 1 < 4){
+        setBallCount(ballCount +1)
+    } else {
+        setBallCount(0)
+    }
   };
 
   const foulClickHandler = () => {
     console.log("foul was clicked!");
+    if(strikeCount + 1 < 2){
+        setStrikeCount(strikeCount + 1)
+    } else {
+        setStrikeCount(2);
+    }
   };
 
   const hitClickHandler = () => {
     console.log("hit was clicked!");
+    setStrikeCount(0);
+    setBallCount(0);
   };
 
   return (
