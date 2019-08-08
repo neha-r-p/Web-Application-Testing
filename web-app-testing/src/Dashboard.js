@@ -7,28 +7,28 @@ const Dashboard = () => {
 
   const strikeClickHandler = () => {
     console.log("strike was clicked!");
-    if(strikeCount + 1 < 3){
-        setStrikeCount(strikeCount +1)
+    if (strikeCount + 1 < 3) {
+      setStrikeCount(strikeCount + 1);
     } else {
-        setStrikeCount(0);
+      setStrikeCount(0);
     }
   };
 
   const ballClickHandler = () => {
     console.log("ball was clicked!");
-    if(ballCount + 1 < 4){
-        setBallCount(ballCount +1)
+    if (ballCount + 1 < 4) {
+      setBallCount(ballCount + 1);
     } else {
-        setBallCount(0)
+      setBallCount(0);
     }
   };
 
   const foulClickHandler = () => {
     console.log("foul was clicked!");
-    if(strikeCount + 1 < 2){
-        setStrikeCount(strikeCount + 1)
+    if (strikeCount + 1 < 2) {
+      setStrikeCount(strikeCount + 1);
     } else {
-        setStrikeCount(2);
+      setStrikeCount(2);
     }
   };
 
@@ -46,9 +46,15 @@ const Dashboard = () => {
         <button className="strike-btn" onClick={strikeClickHandler}>
           Strike
         </button>
-        <button className="ball-btn" onClick={ballClickHandler}>Ball</button>
-        <button className="foul-btn" onClick={foulClickHandler}>Foul</button>
-        <button className="hit-btn" onClick={hitClickHandler}>Hit</button>
+        <button className="ball-btn" onClick={ballClickHandler}>
+          Ball
+        </button>
+        <button className="foul-btn" onClick={foulClickHandler}>
+          Foul
+        </button>
+        <button className="hit-btn" onClick={hitClickHandler}>
+          Hit
+        </button>
       </div>
     </div>
   );

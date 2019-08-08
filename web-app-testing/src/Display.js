@@ -5,6 +5,8 @@ const Display = (props) => {
     console.log(props)
     return (
         <div>
+            <h1>Baseball Scoreboard</h1>
+            <h3>Player at Bat:</h3>
             <p>Balls: {props.ballCount}</p>
             <p>Strikes: {props.strikeCount}</p>
         </div>
