@@ -1,10 +1,12 @@
 import React from 'react';
 
 
-const Display = () => {
+const Display = (props) => {
+    console.log(props)
     return (
         <div>
-            Display
+            <p>Balls: {props.ballCount}</p>
+            <p>Strikes: {props.strikeCount}</p>
         </div>
     )
 }
