@@ -1,3 +1,24 @@
+import React from 'react';
+import Display from './Display'
+
+const Dashboard = () => {
+    return (
+        <div>
+            <Display />
+
+            <div className="dashboard-btns">
+                <button className="strike-btn">Strike</button>
+                <button className="ball-btn">Ball</button>
+                <button className="foul-btn">Foul</button>
+                <button className="hit-btn">Hit</button>
+            </div>
+        </div>
+    )
+}
+
+export default Dashboard;
+
+
 /* 
 -Provide buttons: Strike, Ball, Foul, Hit
 -Update the info on Display
