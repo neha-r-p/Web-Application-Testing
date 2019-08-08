@@ -5,12 +5,16 @@ const Dashboard = () => {
     const [ ballCount, setBallCount ] = useState(0);
     const [ strikeCount, setStrikeCount ] = useState(0);
 
+    const strikeClickHandler = () => {
+       console.log('strike was clicked!')
+    }
+
     return (
         <div>
             <Display ballCount={ballCount} strikeCount={strikeCount} />
 
             <div className="dashboard-btns">
-                <button className="strike-btn">Strike</button>
+                <button className="strike-btn" onClick={strikeClickHandler}>Strike</button>
                 <button className="ball-btn">Ball</button>
                 <button className="foul-btn">Foul</button>
                 <button className="hit-btn">Hit</button>
