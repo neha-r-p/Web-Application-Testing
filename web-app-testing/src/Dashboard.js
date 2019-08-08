@@ -1,30 +1,48 @@
-import React, { useState } from 'react';
-import Display from './Display'
+import React, { useState } from "react";
+import Display from "./Display";
 
 const Dashboard = () => {
-    const [ ballCount, setBallCount ] = useState(0);
-    const [ strikeCount, setStrikeCount ] = useState(0);
+  const [ballCount, setBallCount] = useState(0);
+  const [strikeCount, setStrikeCount] = useState(0);
 
-    const strikeClickHandler = () => {
-       console.log('strike was clicked!')
+  const strikeClickHandler = () => {
+    console.log("strike was clicked!");
+    if(strikeCount < 3){
+        setStrikeCount(strikeCount +1)
+    } if (strikeCount + 1 === 3){
+        setStrikeCount(0);
     }
+  };
 
-    return (
-        <div>
-            <Display ballCount={ballCount} strikeCount={strikeCount} />
+  const ballClickHandler = () => {
+    console.log("ball was clicked!");
+  };
 
-            <div className="dashboard-btns">
-                <button className="strike-btn" onClick={strikeClickHandler}>Strike</button>
-                <button className="ball-btn">Ball</button>
-                <button className="foul-btn">Foul</button>
-                <button className="hit-btn">Hit</button>
-            </div>
-        </div>
-    )
-}
+  const foulClickHandler = () => {
+    console.log("foul was clicked!");
+  };
+
+  const hitClickHandler = () => {
+    console.log("hit was clicked!");
+  };
+
+  return (
+    <div>
+      <Display ballCount={ballCount} strikeCount={strikeCount} />
+
+      <div className="dashboard-btns">
+        <button className="strike-btn" onClick={strikeClickHandler}>
+          Strike
+        </button>
+        <button className="ball-btn" onClick={ballClickHandler}>Ball</button>
+        <button className="foul-btn" onClick={foulClickHandler}>Foul</button>
+        <button className="hit-btn" onClick={hitClickHandler}>Hit</button>
+      </div>
+    </div>
+  );
+};
 
 export default Dashboard;
-
 
 /* 
 -Provide buttons: Strike, Ball, Foul, Hit
